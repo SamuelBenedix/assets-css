@@ -82,10 +82,7 @@ footer .container .footer-social li a:hover{
     text-align: center;
     color: #999;
 }
-
-
 @media (max-width: 991px){
-
     footer {
         padding: 20px 40px;
     }
