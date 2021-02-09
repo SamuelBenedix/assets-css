@@ -13,7 +13,8 @@ nav{
   position: fixed;
   z-index: 99;
   width: 100%;
-  background-color: #fff;
+  
+  background: #242526;
 }
 nav .wrapper{
   position: relative;
@@ -24,10 +25,10 @@ nav .wrapper{
   margin: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 .wrapper .logo a{
-  color: #000;
+  color: #f2f2f2;
   font-size: 30px;
   font-weight: 600;
   text-decoration: none;
@@ -39,7 +40,7 @@ nav .wrapper{
   list-style: none;
 }
 .nav-links li a{
-  color: #000;
+  color: #f2f2f2;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;
@@ -48,14 +49,14 @@ nav .wrapper{
   transition: all 0.3s ease;
 }
 .nav-links li a:hover{
-    color: #b09774;
+  background: #3A3B3C;
 }
 .nav-links .mobile-item{
   display: none;
 }
 .nav-links .drop-menu{
   position: absolute;
-  background: #fff;
+  background: #242526;
   width: 180px;
   line-height: 45px;
   top: 85px;
@@ -87,7 +88,7 @@ nav .wrapper{
   visibility: hidden;
 }
 .mega-box .content{
-  background: #fff;
+  background: #242526;
   padding: 25px 20px;
   display: flex;
   width: 100%;
@@ -104,7 +105,7 @@ nav .wrapper{
   object-fit: cover;
 }
 .content .row header{
-  color: #000;
+  color: #f2f2f2;
   font-size: 20px;
   font-weight: 500;
 }
@@ -123,7 +124,7 @@ nav .wrapper{
   display: block;
 }
 .row .mega-links li a:hover{
-  color: #000;
+  color: #f2f2f2;
 }
 .wrapper .btn{
   color: #fff;
@@ -175,9 +176,6 @@ nav .wrapper{
   #close-btn:checked ~ .btn.menu-btn{
     display: block;
   }
-  .fa-bars{
-      color:#242526 ;
-  } 
   .nav-links li{
     margin: 15px 10px;
   }
@@ -207,7 +205,7 @@ nav .wrapper{
   }
   .nav-links .mobile-item{
     display: block;
-    color: #000;
+    color: #f2f2f2;
     font-size: 20px;
     font-weight: 500;
     padding-left: 20px;
