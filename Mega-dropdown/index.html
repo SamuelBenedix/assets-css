@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
 </head>
 <body>
@@ -133,7 +134,7 @@
                 <i class="fa fa-search"></i>
               </div>
               <div class="cart" data-notify="2">
-                <i class="fa fa-shopping-cart"></i>
+                <i class="fa fa-shopping-cart" id="show-cart"></i>
               </div>
             </div>
 
@@ -152,50 +153,129 @@
           </div>
       </div>
 
-    <div class="wrap-cart js-panel-cart ">
-        <div class="s-full js-hide-cart"></div>
-        <div class="header-cart flex-col-l p-l-65 p-r-25">
-            <div class="header-cart-title flex-w flex-sb-m p-b-8">
-                <span class="mtext-103 cl2">
-                    Your Cart
-                </span>
-                <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
-                    <i class="zmdi zmdi-close"></i>
-                </div>
-            </div>
-            <div class="header-cart-content flex-w js-pscroll">
-                <div id="cartDetails" class=" w-full" style="width:19rem;">
-                    <ul class="header-cart-wrapitem w-full">
-                            <li class="header-cart-item flex-w flex-t m-b-12">
-                                    <div class="header-cart-item-img">
-                                        <img src="assets/img/Product/2.jpg" alt="IMG">
-                                    </div>
-                                    <div class="header-cart-item-txt p-t-8">
-                                        <a href="#" class="header-cart-item-name m-b-18 hov-cl1 trans-04">
-                                            Blossom Soon
-                                        </a>
-                                        <span class="header-cart-item-info">
-                                            Rp.21321321
-                                     </span>
+      <div class="wrap-cart panel-cart">
+          <div class="header-cart ">
+              <div class="header-cart-title">
+                  <span class="cart-title">
+                      Your Cart
+                  </span>
+                  <div class="btn-close-cart">
+                    <span id="hide-cart" class="lnr lnr-cross"></span>
+                  </div>
+              </div>
+              <div class="cart-content">
+                  <div id="cartDetails">
+                      <ul class="header-cart-item w-full">
+                              <li class="cart-item">
+                                      <div class="cart-item-img">
+                                          <img src="assets/img/2.jpg" alt="IMG">
+                                      </div>
+                                      <div class="cart-item-txt">
+                                          <a href="#" class="cart-item-name ">
+                                              Blossom Soon
+                                          </a>
+                                          <div class="cart-item-info">
+                                              <span class="cart-item-price">
+                                                Rp.21321321
+                                               </span>
+                                                 <a href="" class="remove-item">
+                                                   remove
+                                                 </a>
+                                          </div>
+                                  </div>
+                              </li>
+                              <li class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="assets/img/2.jpg" alt="IMG">
                                 </div>
-                            </li>
-                    </ul>
-                </div>
-            </div>
-            <div id="cartTotal" class="w-full">
-                <div class="header-cart-total w-full p-tb-40">
-                   Total : Rp 123213
-                </div>
-                <div class="header-cart-buttons flex-w w-full">
-                    <a href="" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
-                        View Cart
-                    </a>
-                    <a href="" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
-                        Check Out
-                    </a>
-                </div>
-            </div>
-
+                                <div class="cart-item-txt">
+                                    <a href="#" class="cart-item-name ">
+                                        Blossom Soon
+                                    </a>
+                                    <div class="cart-item-info">
+                                        <span class="cart-item-price">
+                                          Rp.21321321
+                                         </span>
+                                           <a href="" class="remove-item">
+                                             remove
+                                           </a>
+                                          </div>
+                                  </div>
+                              </li>
+                              <li class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="assets/img/2.jpg" alt="IMG">
+                                </div>
+                                <div class="cart-item-txt">
+                                    <a href="#" class="cart-item-name ">
+                                        Blossom Soon
+                                    </a>
+                                    <div class="cart-item-info">
+                                        <span class="cart-item-price">
+                                          Rp.21321321
+                                         </span>
+                                           <a href="" class="remove-item">
+                                             remove
+                                           </a>
+                                          </div>
+                                  </div>
+                              </li>
+                              <li class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="assets/img/2.jpg" alt="IMG">
+                                </div>
+                                <div class="cart-item-txt">
+                                    <a href="#" class="cart-item-name ">
+                                        Blossom Soon
+                                    </a>
+                                    <div class="cart-item-info">
+                                        <span class="cart-item-price">
+                                          Rp.21321321
+                                         </span>
+                                           <a href="" class="remove-item">
+                                             remove
+                                           </a>
+                                          </div>
+                                  </div>
+                              </li>
+                              <li class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="assets/img/2.jpg" alt="IMG">
+                                </div>
+                                <div class="cart-item-txt">
+                                    <a href="#" class="cart-item-name ">
+                                        Blossom Soon
+                                    </a>
+                                    <div class="cart-item-info">
+                                        <span class="cart-item-price">
+                                          Rp.21321321
+                                         </span>
+                                           <a href="" class="remove-item">
+                                             remove
+                                           </a>
+                                          </div>
+                                  </div>
+                              </li>
+                              
+                              
+                      </ul>
+                  </div>
+              </div>
+              <div id="cartTotal" class="cart-total">
+                  <div class="header-cart-total">
+                    Total : Rp 123213
+                  </div>
+                  <div class="header-cart-buttons">
+                      <a href="" class="secondary-cart-button">
+                          View Cart
+                      </a>
+                      <a href="" class="primary-cart-button">
+                          Check Out
+                      </a>
+                  </div>
+              </div>
+          </div>
+        </div>  
 
   </nav>
 

@@ -10,4 +10,15 @@ $(document).ready(function () {
 	});
 
 
+		/*==================================================================
+    [ Cart ]*/
+	$("#show-cart").on("click", function () {
+		$(".panel-cart").addClass("show-header-cart");
+	});
+
+	$("#hide-cart").on("click", function () {
+		$(".panel-cart").removeClass("show-header-cart");
+	});
+
+
 })
