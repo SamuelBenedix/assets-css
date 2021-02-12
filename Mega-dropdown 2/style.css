@@ -143,7 +143,7 @@ nav .wrapper{
     width: 100%;
     max-width: 350px;
     top: 0;
-    left: -100%;
+    left: 0;
     background: #242526;
     display: block;
     padding: 50px 10px;
@@ -253,6 +253,8 @@ nav .wrapper{
     font-size: 19px;
   }
 }
+
+
 nav input{
   display: none;
 }
