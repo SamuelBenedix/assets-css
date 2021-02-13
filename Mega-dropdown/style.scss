@@ -98,10 +98,6 @@ img{
 }
 
 
-body{
-    background-color: $white;
-    height: 10000px;
-}
 .main-menu{
   position: fixed;
   z-index: 99;
@@ -542,16 +538,13 @@ body{
         }
     }
 }
-
 .show-header-cart{
     visibility: visible;
 	background-color: rgba(0, 0, 0, 0.6);
     .header-cart {
         right: 0;
     }
-
 }
-
 
 @media screen and (max-width: 970px) {
 

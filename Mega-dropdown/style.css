@@ -92,11 +92,6 @@ img {
   color: #b09774;
 }
 
-body {
-  background-color: #fff;
-  height: 10000px;
-}
-
 .main-menu {
   position: fixed;
   z-index: 99;

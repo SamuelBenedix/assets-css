@@ -9,9 +9,6 @@ $(document).ready(function () {
 		$("#search_input_box").slideUp(500);
 	});
 
-
-/*==================================================================
-    [ Cart ]*/
 	$("#show-cart").on("click", function () {
 		$(".panel-cart").addClass("show-header-cart");
 	});
@@ -21,12 +18,14 @@ $(document).ready(function () {
 	});
 
 	$('.dropdown').on("click",function () {
-		if($(this).children('.dropdown-mega-area').css("display") == "block" ){
-			$(this).children('.dropdown-mega-area').css("display","none")
-			$(".nav-links").css("overflow","hidden")
-		}else {
+		if($(this).children('.dropdown-mega-area').css("display") == "none" && $(window).width() < 970 ){
 			$(this).children('.dropdown-mega-area').css("display","block")
 			$(".nav-links").css("overflow","scroll")
+		}else {
+			if($(window).width() < 970){
+				$(this).children('.dropdown-mega-area').css("display","none")
+				$(".nav-links").css("overflow","hidden")
+			}	
 		}
 	})
 
