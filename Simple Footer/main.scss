@@ -1,94 +1,89 @@
-$primary : #fff;
-$secondary :#999;
+$primary: #fff;
+$secondary: #999;
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-    background: $primary;
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  background: $primary;
 }
 
 footer {
-    position: relative;
-    width: 100%;
-    height: auto;
-    padding: 30px 100px;
-    background: #111;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    
-    .container{
-        .footer-header{
-            color: $primary;
-            width: 100%;
-            text-align: center;
-        }
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 30px 100px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 
-        .footer-menu {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            li{
-                position: relative;
-                margin: 10px 15px 0px 0px;
-                a{
-                    color: $primary;
-                    text-decoration: none;
-                    &:hover{
-                        color: $secondary;
-                        text-decoration: none;
-                    }
-                }
-
-            }
-        }
-
-        .footer-social{
-            display: flex;
-            list-style: none;
-           justify-content: center;
-           li{
-            display: inline-block;
-            position: relative;
-            margin: 10px 10px 0 10px ;
-                a{
-                    font-size: 20px;
-                    color: $primary;
-                    &:hover{
-                        color:$secondary;
-                    }
-    
-                }
-
-           }
-        }
-
+  .container {
+    .footer-header {
+      color: $primary;
+      width: 100%;
+      text-align: center;
     }
+
+    .footer-menu {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      li {
+        position: relative;
+        margin: 10px 15px 0px 0px;
+        a {
+          color: $primary;
+          text-decoration: none;
+          &:hover {
+            color: $secondary;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .footer-social {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      li {
+        display: inline-block;
+        position: relative;
+        margin: 10px 10px 0 10px;
+        a {
+          font-size: 20px;
+          color: $primary;
+          &:hover {
+            color: $secondary;
+          }
+        }
+      }
+    }
+  }
 }
 
-
-.copyright{
-    width: 100%;
-    background: #181818;
-    padding: 8px 100px;
-    text-align: center;
-    color: $secondary;
+.copyright {
+  width: 100%;
+  background: #181818;
+  padding: 8px 100px;
+  text-align: center;
+  color: $secondary;
 }
-@media (max-width: 991px){
-    footer {
-        padding: 20px 40px;
-    }
-    .copyright {
-         padding: 8px 40px;
-    }
+@media (max-width: 991px) {
+  footer {
+    padding: 20px 40px;
+  }
+  .copyright {
+    padding: 8px 40px;
+  }
 }
