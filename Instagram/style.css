@@ -1,11 +1,34 @@
-/*//////////////////////////////////////////////////////////////////
-[ INSTAGRAM ]*/
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Crimson Text', serif;
+  font-family: "Crimson Text", serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.head-section {
+  padding-top: 85px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h1 {
+  font-size: 1.75rem;
+  font-family: "Crimson Text", serif;
+  color: grey;
+  text-transform: uppercase;
+}
+
+.section-header a {
+  color: grey;
 }
 
 .instagram {
