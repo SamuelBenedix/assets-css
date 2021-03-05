@@ -101,7 +101,7 @@ img {
 .button-wrapper {
   background-color: #fff;
   z-index: 2;
-  padding: 25px;
+  padding: 10px 30px;
 }
 
 .navbar-toggler {
@@ -115,9 +115,6 @@ img {
   border-radius: 0.25rem;
   border: none;
   margin: 0;
-}
-.toggle-menu {
-  display: none;
 }
 
 @media screen and (max-width: 970px) {
