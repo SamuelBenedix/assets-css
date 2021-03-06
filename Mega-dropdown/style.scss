@@ -79,25 +79,25 @@ img {
   }
 }
 
-.third-row {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-  ul {
+.mega-items {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  li {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
     display: block;
-    li {
-      display: block;
-      .mega-item {
-        font-size: 16px;
-        padding: 7.5px 20px;
-        text-transform: capitalize;
-        width: 100%;
-        color: $gray;
-        display: inline-block;
-        font-family: "Roboto", sans-serif;
-        font-weight: 300;
-        &:hover {
-          color: $primary;
-        }
+    .mega-item {
+      font-size: 16px;
+      padding: 7.5px 20px;
+      text-transform: capitalize;
+      width: 100%;
+      color: $gray;
+      display: inline-block;
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      &:hover {
+        color: $primary;
       }
     }
   }
