@@ -17,6 +17,7 @@ $(document).ready(function () {
   });
 
   $(".megadropdown").on("click", function () {
+    console.log($(this).children(".dropdown-mega-area"))
     if (
       $(this).children(".dropdown-mega-area").css("display") == "none" &&
       $(window).width() < 970
