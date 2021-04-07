@@ -157,6 +157,40 @@
                       </select>
                     </div>
                   </div>
+                  <div class="col-md-12 input-field">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="sender"
+                      name="address"
+                      required
+                    />
+                    <label for="address" class="input-label">Address </label>
+                  </div>
+
+                  <div class="form-group row mt-3">
+                    <div class="col-md-6 input-field">
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="postal-code"
+                        id="postal-code"
+                        required
+                      />
+                      <label for="postal-code" class="input-label"
+                        >Postal Code
+                      </label>
+                    </div>
+                    <div class="col-6 ps-3">
+                      <label class="select-label" for="city">City </label>
+                      <select name="city" id="city" class="form-control">
+                        <option class="selected">Select City</option>
+                        <option class="selected" value="dasads">
+                          fsdafsdfds
+                        </option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
 
                 <div
@@ -249,9 +283,15 @@
         <div class="col-lg-3">
           <div class="purchase-info">
             <div class="purchase-title">Atur Catatan</div>
-
             <div class="form-group row">
-              <textarea type="text" class="form-control" name="note" rows="1">
+              <textarea
+                value=""
+                type="text"
+                class="form-control"
+                name="note"
+                rows="1"
+                placeholder="Tulis Catatan"
+              >
               </textarea>
             </div>
             <div class="purchase-detail">

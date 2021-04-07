@@ -342,6 +342,7 @@ textarea.form-control {
   border: 1px solid #e5e7e9;
   border-radius: 8px;
   padding: 0px 12px;
+  margin: 0 10px;
 }
 
 .purchase-title {

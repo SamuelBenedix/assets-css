@@ -1,0 +1,26 @@
+.background-message {
+  background-color: #efefef;
+  height: 100vh;
+  width: 100%;
+}
+
+.card {
+  height: 62vh;
+  width: 55%;
+  background-size: cover;
+  padding: 50px;
+  margin: 50px;
+}
+
+.from,
+.to {
+  font-family: "Poppins", sans-serif;
+}
+
+.message {
+  font-family: "Alex Brush", cursive;
+  font-size: 35px;
+  margin: 5px;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */
