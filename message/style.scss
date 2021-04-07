@@ -1,25 +1,31 @@
 .background-message {
   background-color: #efefef;
-  height: 100vh;
+}
+
+.message-wrap {
+  position: relative;
+}
+
+img {
+  display: block;
   width: 100%;
 }
 
-.card {
-  height: 62vh;
+.img-wrap {
+  width: 70%;
+}
+.message-text {
+  position: absolute;
   width: 55%;
-  background-size: cover;
-  padding: 50px;
-  margin: 50px;
 }
 
 .from,
 .to {
   font-family: "Poppins", sans-serif;
 }
-
 .message {
   font-family: "Alex Brush", cursive;
   font-size: 35px;
-  margin: 5px;
+  margin: 15px 0 15px 0;
   text-align: center;
 }
