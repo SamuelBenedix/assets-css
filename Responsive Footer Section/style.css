@@ -1,25 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
   justify-content: flex-end;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   background: #fff;
 }
@@ -30,47 +20,28 @@ footer {
   height: auto;
   padding: 50px 100px;
   background: #111;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-
 footer p {
   color: #999;
 }
-
 footer .container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: row;
   flex-direction: row;
 }
-
 footer .container .sec {
   margin-right: 30px;
 }
-
 footer .container .sec.aboutus {
   width: 40%;
 }
 
 footer .container .sec .sci {
   margin-top: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
@@ -83,14 +54,8 @@ footer .container .sec .sci li a {
   width: 40px;
   height: 40px;
   background: #222;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   margin-right: 10px;
   text-decoration: none;
@@ -154,8 +119,6 @@ footer .container .contact {
 }
 
 footer .container .contact .info li {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-bottom: 16px;
 }
@@ -190,23 +153,24 @@ footer .container .contact .info li a:hover {
   footer {
     padding: 40px;
   }
+
   footer .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
   }
+
   footer .container .sec {
     margin-right: 0;
     margin-bottom: 40px;
   }
+
   footer .container .sec.aboutus,
-  .quicklinks,
-  .contact {
+.quicklinks,
+.contact {
     width: 100%;
   }
+
   .copyright {
     padding: 8px 40px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style.css.map *//*# sourceMappingURL=style.css.map */

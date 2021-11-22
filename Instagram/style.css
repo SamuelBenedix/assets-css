@@ -3,8 +3,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Crimson Text", serif;
 }
 
@@ -21,14 +20,12 @@ img {
   text-align: center;
   margin-bottom: 50px;
 }
-
 .section-header h1 {
   font-size: 1.75rem;
   font-family: "Crimson Text", serif;
   color: grey;
   text-transform: uppercase;
 }
-
 .section-header a {
   color: grey;
 }
@@ -40,25 +37,14 @@ img {
 }
 
 .main-instagram {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   margin-top: 12px;
   padding-top: 20px;
 }
-
 .main-instagram .picture-instagram {
   width: 300px;
   margin: 5px;
@@ -67,11 +53,9 @@ img {
   position: relative;
   text-align: center;
 }
-
 .main-instagram .picture-instagram img {
   display: block;
   position: relative;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -80,21 +64,14 @@ img {
   filter: alpha(opacity=100);
   color: #fff;
   font-size: 25px;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  align-items: center;
+  align-content: center;
 }
-
 .picture-instagram:hover .overlay .icon {
   display: block;
 }
-
 .picture-instagram:hover img {
-  -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
 
@@ -108,7 +85,6 @@ img {
   visibility: hidden;
   background-color: rgba(176, 151, 116, 0.7);
 }
-
 .overlay .icon {
   display: none;
 }
@@ -117,18 +93,18 @@ img {
   .instagram {
     width: 800px;
   }
+
   .main-instagram .picture-instagram {
     width: 200px;
   }
 }
-
 @media (max-width: 540px) {
   .instagram {
     padding: 5px;
     width: 350px;
   }
+
   .main-instagram .picture-instagram {
     width: 100px;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

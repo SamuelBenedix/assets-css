@@ -1,8 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Crimson Text", serif;
 }
 
@@ -18,10 +17,8 @@ a {
   position: relative;
   width: 70%;
   height: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 5px;
   grid-auto-flow: dense;
   margin: 10% auto;
@@ -49,5 +46,4 @@ a {
 
 .grid :nth-child(8) {
   grid-column: span 2;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

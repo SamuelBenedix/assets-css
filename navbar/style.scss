@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 $primary: #ffa83f;
@@ -34,6 +34,7 @@ img {
 }
 .logo-brand {
   display: inline-block;
+  max-width: 20%;
   img {
     max-height: 5.5rem;
   }
@@ -120,7 +121,7 @@ img {
 @media screen and (max-width: 970px) {
   .logo-brand {
     img {
-      width: 70%;
+      width: 150%;
     }
   }
 
