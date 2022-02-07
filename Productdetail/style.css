@@ -3,7 +3,8 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
 
@@ -14,9 +15,16 @@
   line-height: 1.466667;
   text-transform: uppercase;
   color: #fff;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
   margin: 0 8px 10px 0;
   padding: 0 15px 0 15px;
@@ -28,6 +36,7 @@
   height: 45px;
   border: 0px;
 }
+
 .primary-button:hover {
   background-color: #836d4f;
   color: #fff;
@@ -54,6 +63,8 @@ img {
 }
 
 .img-showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   transition: all 0.5s ease;
@@ -62,11 +73,14 @@ img {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
+
 .img-showcase img {
   min-width: 100%;
 }
 
 .img-select {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -74,9 +88,11 @@ img {
   margin: 0.3rem;
   cursor: pointer;
 }
+
 .img-item:nth-child(1), .img-item:nth-child(2) {
   margin-right: 0;
 }
+
 .img-item:hover {
   opacity: 0.8;
 }
@@ -86,7 +102,8 @@ img {
 }
 
 .product-item:hover {
-  box-shadow: 0px 20px 20px 0px rgba(0, 23, 51, 0.09);
+  -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 23, 51, 0.09);
+          box-shadow: 0px 20px 20px 0px rgba(0, 23, 51, 0.09);
 }
 
 .discount {
@@ -117,8 +134,10 @@ img {
 }
 
 .product-text {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+
 .product-text .product-title {
   font-family: "Crimson Text", serif;
   text-transform: uppercase;
@@ -147,6 +166,7 @@ label {
 .form-group {
   margin-bottom: 1rem;
 }
+
 .form-group.row {
   padding: 0;
   --bs-gutter-x: 0;
@@ -160,12 +180,13 @@ label {
 .form-control:hover,
 .form-control:active,
 .form-control:focus {
+  -webkit-box-shadow: none !important;
   box-shadow: none !important;
 }
 
-.input-field input[type=text],
-.input-field input[type=email],
-.input-field input[type=date] {
+.input-field input[type="text"],
+.input-field input[type="email"],
+.input-field input[type="date"] {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   padding-top: 20px;
@@ -174,7 +195,7 @@ label {
   height: 47px;
 }
 
-input[type=date] {
+input[type="date"] {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   padding-top: 20px;
@@ -229,11 +250,11 @@ select.form-control:not([size]):not([multiple]) {
   -o-transform: translateY(12px);
 }
 
-.input-field input[type=text]:focus + label,
-.input-field input[type=text]:valid + label,
-.input-field input[type=email]:focus + label,
-.input-field input[type=email]:invalid + label,
-.input-field input[type=email]:valid + label {
+.input-field input[type="text"]:focus + label,
+.input-field input[type="text"]:valid + label,
+.input-field input[type="email"]:focus + label,
+.input-field input[type="email"]:invalid + label,
+.input-field input[type="email"]:valid + label {
   font-family: "Roboto", sans-serif;
   transform: translateY(-2px);
   -webkit-transform: translateY(-2px);
@@ -247,10 +268,17 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .button-section {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-align-items: center;
-  align-items: center;
-  flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   padding-top: 45px;
@@ -328,10 +356,17 @@ textarea.form-control {
 }
 
 .purchase-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .purchase-detail.subtotal {
   font-weight: 700;
 }
@@ -344,27 +379,41 @@ textarea.form-control {
     font-size: 1.1rem;
   }
 }
+
 @media screen and (min-width: 992px) {
   .card {
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
   }
-
   .card-wrapper {
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-
   .product-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
-
   .product-content {
     padding-top: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

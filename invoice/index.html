@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      .navbar-wrapper {
+        padding: 12px 50px;
+        font-size: 0;
+        line-height: 1.4;
+        box-shadow: 0 -1px 7px 0 rgba(0, 0, 0, 0.15);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        z-index: 100;
+      }
+
+      .navbar-item {
+        width: 50%;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 12px;
+        text-align: right;
+      }
+
+      .btn-print {
+        height: 100%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      button.print {
+        border: none;
+        font-family: 'Crimson Text', serif;
+        height: 100%;
+        cursor: pointer;
+        padding: 8px 40px;
+        border-color: #b09774;
+        border-radius: 4px;
+        background-color: #b09774;
+        margin-left: 16px;
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 1px;
+        line-height: 1.333;
+        font-weight: 700;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+      }
+
+      .btn-print:hover button.print {
+        background-color: #836d4f;
+        transition: all 0.5s ease;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -ms-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+      }
+
+      .content-area {
+        margin: 80px auto 80px auto;
+        width: 700px;
+      }
+
+      @media print {
+        .no-print,
+        .no-print * {
+          display: none !important;
+        }
+
+        .content-area {
+          margin: 0px auto 80px auto;
+        }
+      }
+
+      .table {
+        width: 100%;
+        color: #343030;
+      }
+
+      .table-inner {
+        padding-bottom: 20px;
+        border-bottom: thin dashed #cccccc;
+      }
+
+      .table-date {
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 6px;
+        width: 80px;
+      }
+
+      .table-seller {
+        font-size: 12px;
+        font-weight: 600;
+        padding-bottom: 6px;
+        width: 70px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="content-area">
+      <table class="table" width="100%" cellspacing="0" cellpadding="0">
+        <tbody>
+          <tr>
+            <td>
+              <table
+                class="table-inner"
+                width="100%"
+                cellspacing="0"
+                cellpadding="0"
+              >
+                <tbody>
+                  <tr>
+                    <td style="width: 55%; vertical-align: top">
+                      <table width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td colspan="2">
+                              <img
+                                src=""
+                                alt="Preciosa Florist"
+                                style="margin-bottom: 15px; width: 200px"
+                              />
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td colspan="2" style="font-size: 14px">
+                              <span style="font-weight: 600"
+                                >Nomor Invoice</span
+                              >
+                              :
+                              <span style="color: #b09774; font-weight: 600">
+                                Nomor Invoice
+                              </span>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              colspan="2"
+                              style="font-size: 12px; padding: 8px 0"
+                            >
+                              Diterbitkan atas nama:
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-seller">Penjual</td>
+                            <td style="font-size: 12px; padding-bottom: 6px">
+                              <p>Preciosa Florist</p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="table-date">Tanggal</td>
+                            <td style="font-size: 12px; padding-bottom: 6px">
+                              Date
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                    <td
+                      style="
+                        width: 43%;
+                        vertical-align: bottom;
+                        padding-left: 30px;
+                      "
+                    >
+                      <table width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td
+                              style="
+                                font-weight: 600;
+                                font-size: 14px;
+                                padding-bottom: 8px;
+                              "
+                            >
+                              Detail Pengirim:
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 12px; padding-bottom: 20px">
+                              <span
+                                style="
+                                  margin-bottom: 3px;
+                                  font-weight: 600;
+                                  display: block;
+                                "
+                              >
+                                Nama Customer :
+                                <span> Nama Customer </span>
+                              </span>
+                              <div>
+                                Nomor Telepon :
+                                <span> Nomor Telepon </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              style="
+                                font-weight: 600;
+                                font-size: 14px;
+                                padding-bottom: 8px;
+                              "
+                            >
+                              Detail Pembayaran:
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="font-size: 12px; padding-bottom: 20px">
+                              Tipe Pembayaran
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <table
+                style="
+                  border: thin dashed rgba(0, 0, 0, 0.34);
+                  border-radius: 4px;
+                  color: #343030;
+                  margin-top: 20px;
+                "
+                width="100%"
+                cellspacing="0"
+                cellpadding="0"
+              >
+                <tbody>
+                  <tr
+                    style="
+                      background-color: rgba(242, 242, 242, 0.74);
+                      font-size: 14px;
+                      font-weight: 600;
+                    "
+                  >
+                    <td style="padding: 10px 15px">Nama Produk</td>
+                    <td style="padding: 10px 15px">Deskripsi</td>
+                    <td style="padding: 10px 15px; text-align: center">
+                      Jumlah
+                    </td>
+                    <td
+                      style="
+                        padding: 10px 15px;
+                        white-space: nowrap;
+                        text-align: center;
+                      "
+                    >
+                      Harga
+                    </td>
+                    <td
+                      style="
+                        padding: 10px 15px;
+                        white-space: nowrap;
+                        text-align: center;
+                      "
+                    >
+                      Subtotal
+                    </td>
+                  </tr>
+                  <?php
+                                $total = 0;
+                                $all_price = 0;
+                                ?>
+
+                  <tr style="font-size: 14px">
+                    <td
+                      style="
+                        padding: 15px;
+                        font-weight: 600;
+                        word-break: break-word;
+                      "
+                      width="200"
+                    >
+                      <p>Order Name</p>
+                    </td>
+                    <td
+                      style="
+                        padding: 15px;
+                        text-align: start;
+                        font-size: 11px;
+                        color: #666666; ;
+                      "
+                      valign="top"
+                      width="250"
+                    >
+                      <p>Delivery Order : Delibvery Option</p>
+                      <p>
+                        Delivery Date :
+                        <span>Date</span>
+                      </p>
+                      <p>
+                        Recipient's Name:
+                        <span>name</span>
+                      </p>
+                    </td>
+                    <td style="padding: 15px; text-align: center">1</td>
+                    <td
+                      style="
+                        padding: 15px;
+                        white-space: nowrap;
+                        text-align: end;
+                      "
+                    >
+                      <p>Rp. Harga Satuan</p>
+                    </td>
+                    <td
+                      style="
+                        padding: 15px;
+                        white-space: nowrap;
+                        text-align: end;
+                      "
+                    >
+                      <p>Rp. Subtotal</p>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td colspan="5" style="padding: 0 15px">
+                      <div style="border-bottom: thin solid #e0e0e0"></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td colspan="4">
+                      <table
+                        style="padding-right: 15px; font-size: 14px"
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tbody>
+                          <tr>
+                            <td style="padding: 0 15px">Delivery Charge</td>
+                            <td
+                              style="
+                                padding: 15px 0 15px 15px;
+                                text-align: right;
+                              "
+                            >
+                              Delivery Charge
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 0 15px">Service Charge</td>
+                            <td
+                              style="
+                                padding: 15px 0 15px 15px;
+                                text-align: right;
+                              "
+                            >
+                              Rp. Service Charge
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="padding: 0 15px">Ongkos Rangkai</td>
+                            <td
+                              style="
+                                padding: 15px 0 15px 15px;
+                                text-align: right;
+                              "
+                            >
+                              Rp. Ongkos Rangkai
+                            </td>
+                          </tr>
+
+                          <tr>
+                            <td style="padding: 0 15px; font-weight: 600">
+                              Subtotal
+                            </td>
+                            <td
+                              style="
+                                padding: 15px 0 15px 15px;
+                                text-align: right;
+                                font-weight: 600;
+                              "
+                            >
+                              SubTotal
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="5" style="padding: 0 15px">
+                      <div style="border-bottom: thin solid #e0e0e0"></div>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td></td>
+                    <td colspan="4">
+                      <table
+                        style="
+                          padding-right: 15px;
+                          font-size: 14px;
+                          font-weight: 600;
+                        "
+                        width="100%"
+                        cellspacing="0"
+                        cellpadding="0"
+                      >
+                        <tbody>
+                          <tr>
+                            <td style="padding: 15px">Subtotal Harga Barang</td>
+                            <td
+                              style="
+                                padding: 15px 0 15px 15px;
+                                text-align: right;
+                              "
+                            >
+                              Rp. Subtotal
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div
+                style="float: left; font-weight: bold; margin-top: 20px"
+              ></div>
+              <div style="float: right">
+                <table>
+                  <!-- subtotal ongkir -->
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td style="width: 50%"></td>
+                              <td style="width: 50%">
+                                <table
+                                  style="
+                                    width: 430px;
+                                    margin-top: 15px;
+                                    padding: 15px;
+                                    border-radius: 4px;
+                                    border: thin dashed #cccccc;
+                                    font-size: 12px;
+                                    font-weight: 600;
+                                  "
+                                  width="100%"
+                                >
+                                  <tbody>
+                                    <tr style="font-weight: normal">
+                                      <td style="padding-bottom: 10px">
+                                        Invoice Delivery Charge
+                                        <div
+                                          style="
+                                            font-size: 11px;
+                                            color: rgba(0, 0, 0, 0.54);
+                                            margin-top: 8px;
+                                          "
+                                        >
+                                          Invoice akan dikirim ke alamat :
+                                          <strong>
+                                            {{ $items->invoice[0]->address
+                                            }}</strong
+                                          >
+                                        </div>
+                                      </td>
+                                      <td
+                                        style="
+                                          padding-bottom: 10px;
+                                          text-align: right;
+                                          white-space: nowrap;
+                                          vertical-align: top;
+                                        "
+                                      >
+                                        Rp. {{
+                                        number_format($items->invoice[0]->delivery_charge,
+                                        0, ',', '.') }}
+                                      </td>
+                                    </tr>
+
+                                    <tr style="font-size: 14px">
+                                      <td
+                                        style="
+                                          border-top: thin solid #e0e0e0;
+                                          padding-top: 10px;
+                                        "
+                                      >
+                                        Subtotal Biaya Lainnya
+                                      </td>
+                                      <td
+                                        style="
+                                          border-top: thin solid #e0e0e0;
+                                          padding-top: 10px;
+                                          text-align: right;
+                                          white-space: nowrap;
+                                        "
+                                      >
+                                        Rp. delivery Charge
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- total belanja -->
+
+                    <tr>
+                      <td>
+                        <table width="100%" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td style="width: 50%"></td>
+                              <td style="width: 50%">
+                                <table
+                                  style="
+                                    width: 430px;
+                                    margin-top: 15px;
+                                    padding: 15px;
+                                    border-radius: 4px;
+                                    border: thin solid rgba(0, 0, 0, 0.54);
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                  "
+                                  width="100%"
+                                >
+                                  <tbody>
+                                    <tr>
+                                      <td>Total Belanja</td>
+                                      <td style="text-align: right">
+                                        Total Belanja
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+
+                    <!-- Keterangan -->
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

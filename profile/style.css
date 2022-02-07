@@ -2,14 +2,21 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   min-height: 100vh;
   background: #ffa83f;
 }
@@ -31,18 +38,30 @@ img {
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .about .about-me {
-  flex: 0 0 32%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32%;
+          flex: 0 0 32%;
   max-width: 40%;
   padding: 0 15px;
 }
+
 .about .info {
-  flex: 0 0 70%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 70%;
+          flex: 0 0 70%;
   max-width: 70%;
   padding: 0 50px;
 }
@@ -62,13 +81,18 @@ img {
 }
 
 .social-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
 }
+
 .social-wrapper .social-item {
   display: inline-block;
   position: relative;
@@ -111,6 +135,7 @@ img {
   color: #000;
   width: 100%;
 }
+
 .profile-name .name {
   font-size: 21px;
   font-weight: 600;
@@ -119,12 +144,14 @@ img {
 .info {
   font-size: 1.1rem;
 }
+
 .info .info-title {
   font-size: 1.5rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   position: relative;
 }
+
 .info .info-title::before {
   content: "";
   z-index: -1;
@@ -148,55 +175,80 @@ img {
 .info-list {
   padding-top: 40px;
 }
+
 .info-list .info-wrapper {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
   width: 100%;
 }
+
 .info-list .info-wrapper .info-item {
   padding-right: 30px;
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   max-width: 50%;
   display: block;
 }
 
 @media screen and (max-width: 720px) {
   .about {
-    flex-wrap: wrap;
-    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0;
   }
   .about .about-me {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 40%;
     padding: 0 15px;
   }
   .about .info {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
     padding: 30px 50px;
   }
 }
+
 @media screen and (max-width: 540px) {
   .about .about-me {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 60%;
     padding: 0 15px;
   }
-
   .info-list {
     padding-top: 10px;
   }
   .info-list .info-wrapper {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .info-list .info-wrapper .info-item {
-    flex: 0 0 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
     max-width: 100%;
     padding-top: 10px;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */

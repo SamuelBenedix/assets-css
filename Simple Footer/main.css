@@ -1,16 +1,26 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 100vh;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background: #fff;
 }
 
@@ -20,46 +30,68 @@ footer {
   height: auto;
   padding: 30px 100px;
   background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 footer .container .footer-header {
   color: #fff;
   width: 100%;
   text-align: center;
 }
+
 footer .container .footer-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style: none;
 }
+
 footer .container .footer-menu li {
   position: relative;
   margin: 10px 15px 0px 0px;
 }
+
 footer .container .footer-menu li a {
   color: #fff;
   text-decoration: none;
 }
+
 footer .container .footer-menu li a:hover {
   color: #999;
   text-decoration: none;
 }
+
 footer .container .footer-social {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   list-style: none;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
+
 footer .container .footer-social li {
   display: inline-block;
   position: relative;
   margin: 10px 10px 0 10px;
 }
+
 footer .container .footer-social li a {
   font-size: 20px;
   color: #fff;
 }
+
 footer .container .footer-social li a:hover {
   color: #999;
 }
@@ -76,8 +108,8 @@ footer .container .footer-social li a:hover {
   footer {
     padding: 20px 40px;
   }
-
   .copyright {
     padding: 8px 40px;
   }
-}/*# sourceMappingURL=main.css.map */
+}
+/*# sourceMappingURL=main.css.map */
